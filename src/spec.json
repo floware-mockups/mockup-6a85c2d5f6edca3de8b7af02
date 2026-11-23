@@ -1,0 +1,225 @@
+{
+  "title": "Gestione esiti delle verifiche documentali",
+  "description": "Prototipo per registrare pratiche verificate, tracciare gli esiti documentali e ricordare il controllo delle comunicazioni antimafia sulla BDNa. Tutti i dati sono inventati; gli alert sono promemoria interni, non attestazioni ufficiali.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "dashboard",
+      "title": "Dashboard",
+      "description": "Riepilogo delle pratiche e dei promemoria di verifica.",
+      "metrics": [
+        {
+          "label": "Pratiche registrate",
+          "value": "4"
+        },
+        {
+          "label": "Verifiche completate",
+          "value": "2"
+        },
+        {
+          "label": "Controlli BDNa da ricordare",
+          "value": "2"
+        },
+        {
+          "label": "Esiti da aggiornare",
+          "value": "1"
+        }
+      ],
+      "columns": [
+        "Pratica",
+        "Organizzazione",
+        "Casellario",
+        "Controllo antimafia",
+        "Promemoria BDNa"
+      ],
+      "rows": [
+        [
+          "PR-2041",
+          "Lumo Cantieri",
+          "Verificato",
+          "Comunicazione in attesa",
+          "Controllare esito"
+        ],
+        [
+          "PR-2042",
+          "Vela Servizi",
+          "Verificato",
+          "Esito registrato",
+          "Completato"
+        ],
+        [
+          "PR-2043",
+          "Nubi Forniture",
+          "In verifica",
+          "Comunicazione in attesa",
+          "Controllare esito"
+        ],
+        [
+          "PR-2044",
+          "Riva Impianti",
+          "Verificato",
+          "Esito registrato",
+          "Completato"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "pratiche",
+      "title": "Elenco pratiche",
+      "description": "Elenco filtrabile delle pratiche con esiti sintetici e promemoria BDNa.",
+      "metrics": [
+        {
+          "label": "In attesa di controllo BDNa",
+          "value": "2"
+        },
+        {
+          "label": "Verificate",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Codice pratica",
+        "Organizzazione",
+        "Casellario giudiziale",
+        "Controllo antimafia",
+        "Riferimento comunicazione",
+        "Esito BDNa",
+        "Data ultimo controllo",
+        "Promemoria"
+      ],
+      "rows": [
+        [
+          "PR-2041",
+          "Lumo Cantieri",
+          "Verificato",
+          "Comunicazione in attesa",
+          "COM-771",
+          "Da verificare",
+          "2025-03-04",
+          "Controllare esito"
+        ],
+        [
+          "PR-2042",
+          "Vela Servizi",
+          "Verificato",
+          "Esito registrato",
+          "COM-772",
+          "Regolare",
+          "2025-03-03",
+          "Completato"
+        ],
+        [
+          "PR-2043",
+          "Nubi Forniture",
+          "In verifica",
+          "Comunicazione in attesa",
+          "COM-773",
+          "Da verificare",
+          "2025-03-02",
+          "Controllare esito"
+        ],
+        [
+          "PR-2044",
+          "Riva Impianti",
+          "Verificato",
+          "Esito registrato",
+          "COM-774",
+          "Regolare",
+          "2025-03-01",
+          "Completato"
+        ]
+      ],
+      "form": [
+        "Codice pratica",
+        "Organizzazione",
+        "Casellario giudiziale",
+        "Controllo antimafia",
+        "Riferimento comunicazione",
+        "Esito BDNa",
+        "Data ultimo controllo",
+        "Promemoria"
+      ]
+    },
+    {
+      "id": "promemoria",
+      "title": "Promemoria BDNa",
+      "description": "Vista operativa delle comunicazioni antimafia con esito ancora da controllare. Aggiornare il promemoria dopo la verifica sulla BDNa.",
+      "metrics": [
+        {
+          "label": "Promemoria aperti",
+          "value": "2"
+        },
+        {
+          "label": "Comunicazioni in attesa",
+          "value": "2"
+        }
+      ],
+      "columns": [
+        "Codice pratica",
+        "Organizzazione",
+        "Riferimento comunicazione",
+        "Stato comunicazione",
+        "Esito BDNa",
+        "Data ultimo controllo"
+      ],
+      "rows": [
+        [
+          "PR-2041",
+          "Lumo Cantieri",
+          "COM-771",
+          "In attesa",
+          "Da verificare",
+          "2025-03-04"
+        ],
+        [
+          "PR-2043",
+          "Nubi Forniture",
+          "COM-773",
+          "In attesa",
+          "Da verificare",
+          "2025-03-02"
+        ]
+      ],
+      "form": [
+        "Codice pratica",
+        "Organizzazione",
+        "Riferimento comunicazione",
+        "Stato comunicazione",
+        "Esito BDNa",
+        "Data ultimo controllo"
+      ]
+    },
+    {
+      "id": "nuova-pratica",
+      "title": "Registra pratica",
+      "description": "Inserimento di una pratica e dei relativi esiti documentali. Inserire solo informazioni necessarie; il controllo sulla BDNa resta un'attività da svolgere e registrare separatamente.",
+      "metrics": [],
+      "columns": [
+        "Codice pratica",
+        "Organizzazione",
+        "Casellario giudiziale",
+        "Controllo antimafia",
+        "Riferimento comunicazione",
+        "Esito BDNa",
+        "Data ultimo controllo",
+        "Promemoria"
+      ],
+      "rows": [],
+      "form": [
+        "Codice pratica",
+        "Organizzazione",
+        "Casellario giudiziale",
+        "Controllo antimafia",
+        "Riferimento comunicazione",
+        "Esito BDNa",
+        "Data ultimo controllo",
+        "Promemoria"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "blu-istituzionale",
+    "fonts": "istituzionale"
+  }
+}
